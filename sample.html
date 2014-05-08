@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)https://github.com/ameo-tech/simple-file-uploader -->
+<html class="">
+
+<head>
+<script type="text/javascript" src="fileuploader.js" />
+<script type="text/javascript">
+$(function(){
+	$("#BusinesLogo").InitUploader({
+            form: "uploadForm",
+            realFileId: "#BusinesLogo",
+            action: "/DealerShip/Upload",
+            targetFrame: "fileTarget",
+            //clonedFileName: "",
+            func: function (path) {
+                $("#busLogo").attr("src", path);
+                $("#DealerShipAddress_Logo").val(path);                
+            },
+        });
+});
+</script>
+</head>
+
+<body>
+	<input type="button" id="BusinesLogo" name="BusinesLogo"/>
+</body>
+
+ </html> 
