@@ -7,13 +7,13 @@
 <script type="text/javascript">
 $(function(){
 	$("#BusinesLogo").InitUploader({
-            form: "uploadForm",
-            realFileId: "#BusinesLogo",
-            action: "/DealerShip/Upload",
-            targetFrame: "fileTarget",
-            func: function (path) {
-                $("#busLogo").attr("src", path);
-                $("#DealerShipAddress_Logo").val(path);                
+            form: "uploadForm", //form name that is to be created at runtime to post file to server.
+            realFileId: "#BusinesLogo", // ID of the file input.
+            action: "/DealerShip/Upload", // Controller action where to post upper form.
+            targetFrame: "fileTarget", // Iframe id that has been executed once file has been uploaded.
+            func: function (path) { // Callback function 'path' patameter will return response that you send from server.
+            	//Do you client side stuff here.
+                alert(path);                
             },
         });
 });
