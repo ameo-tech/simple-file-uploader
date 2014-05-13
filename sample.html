@@ -13,6 +13,7 @@ $(function(){
             targetFrame: "fileTarget", // Iframe id that has been executed once file has been uploaded.
             func: function (path) { // Callback function 'path' patameter will return response that you send from server.
             	//Do you client side stuff here.
+            	$("#uploadedImage").attr("src", path);
                 alert(path);                
             },
         });
@@ -22,6 +23,7 @@ $(function(){
 
 <body>
 	<input type="button" id="BusinesLogo" name="BusinesLogo"/>
+	<img src="" alt="Image Path" id="uploadedImage" name="uploadedImage" />
 </body>
 
  </html> 
